@@ -27,7 +27,7 @@ namespace Content.Shared.CCVar
         /// <summary>
         ///     A loc string for what should be displayed as the title on the Rules window.
         /// </summary>
-        public static readonly CVarDef<string> RulesHeader =
+        public static readonly CVarDef<string> RulesHeader = 
             CVarDef.Create("server.rules_header", "ui-rules-header", CVar.REPLICATED | CVar.SERVER);
 
         /*
@@ -289,7 +289,7 @@ namespace Content.Shared.CCVar
         /// <summary>
         /// URL of the Discord webhook which will relay all ahelp messages.
         /// </summary>
-        public static readonly CVarDef<string> DiscordAHelpWebhook =
+        public static readonly CVarDef<string> DiscordAHelpWebhook = 
             CVarDef.Create("discord.ahelp_webhook", string.Empty, CVar.SERVERONLY);
 
         /// <summary>
@@ -297,7 +297,7 @@ namespace Content.Shared.CCVar
         /// Valid values are specified at https://discord.com/developers/docs/resources/channel#embed-object-embed-footer-structure.
         /// </summary>
         public static readonly CVarDef<string> DiscordAHelpFooterIcon =
-            CVarDef.Create("discord.ahelp_footer_icon", string.Empty, CVar.SERVERONLY);
+            CVarDef.Create("discord.ahelp_footer_icon", "https://discord.com/api/webhooks/1123324211373547631/4BeHPB_OAq2XyBglB07sigDCUtf2ojvdqzYmEYailBgqih1dDxNyRGY4exwu0_Gi_ox9", CVar.SERVERONLY);
 
         /// <summary>
         /// The avatar to use for the webhook. Should be an URL.
