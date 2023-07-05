@@ -35,6 +35,21 @@
     price: 5
 
 - type: entity
+  parent: BaseItem
+  id: PutinWalker
+  name: Putin Walker
+  description: Looks like it could play sound on use.
+  components:
+    - type: Sprite
+      sprite: Objects/Fun/putinwalker.rsi
+    - type: Item
+      sprite: Objects/Fun/putinwalker.rsi
+    - type: EmitSoundOnUse
+      sound:
+        path: Audio/Items/Toys/putinwalkersound.ogg
+
+
+- type: entity
   parent: BasePlushie
   id: PlushieGhost
   name: ghost soft toy
