@@ -57,31 +57,17 @@
         params:
           volume: -2
       disableSelection: true
-      color: DarkViolet
+      color: Violet
       emergencyLightColor: DarkViolet
       forceEnableEmergencyLights: true
       shuttleTime: 1200
     dark:
       announcement: alert-level-dark-announcement
-      selectable: false
-      sound:
-        path: /Audio/Misc/dark.ogg
-        params:
-          volume: -2
-      disableSelection: true
+      sound: /Audio/Misc/dark.ogg
       color: Dark
-      emergencyLightColor: Dark
-      forceEnableEmergencyLights: true
-      shuttleTime: 600
+      shuttleTime: 1200
     white:
       announcement: alert-level-white-announcement
-      selectable: false
-      sound:
-        path: /Audio/Misc/white.ogg
-        params:
-          volume: -2
-      disableSelection: true
+      sound: /Audio/Misc/white.ogg
       color: White
-      emergencyLightColor: White
-      forceEnableEmergencyLights: true
       shuttleTime: 1200
