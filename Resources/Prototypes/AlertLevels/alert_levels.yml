@@ -61,7 +61,7 @@
       emergencyLightColor: DarkViolet
       forceEnableEmergencyLights: true
       shuttleTime: 1200
-      unknown:
+    unknown:
       announcement: alert-level-unknown-announcement
       selectable: false
       sound:
@@ -72,8 +72,8 @@
       color: PaleVioletRed
       emergencyLightColor: PaleVioletRed
       forceEnableEmergencyLights: true
-      shuttleTime: 120000
-      dark:
+      shuttleTime: 1200
+    dark:
       announcement: alert-level-dark-announcement
       selectable: false
       sound:
@@ -85,3 +85,15 @@
       emergencyLightColor: Dark
       forceEnableEmergencyLights: true
       shuttleTime: 600
+    white:
+      announcement: alert-level-white-announcement
+      selectable: false
+      sound:
+        path: /Audio/Misc/white.ogg
+        params:
+          volume: -2
+      disableSelection: true
+      color: White
+      emergencyLightColor: White
+      forceEnableEmergencyLights: true
+      shuttleTime: 1200
