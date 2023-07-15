@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Numerics;
 using Content.Server.Administration.Commands;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking.Rules.Components;
@@ -646,7 +647,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
         component.NukieOutpost = outpostGrids[0];
 
         // Listen I just don't want it to overlap.
-        if (!_map.TryLoad(mapId, shuttlePath.ToString(), out var grids, new MapLoadOptions {Offset = Vector2.One*1000f}) || !grids.Any())
+        if (!_map.TryLoad(mapId, shuttlePath.ToString(), out var grids, new MapLoadOptions {Offset = Vector2.One * 1000f}) || !grids.Any())
         {
             Logger.ErrorS("nukies", $"Error loading grid {shuttlePath} for nukies!");
             return false;
@@ -765,7 +766,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
                 var mob = EntityManager.SpawnEntity(species.Prototype, _random.Pick(spawns));
                 SetupOperativeEntity(mob, spawnDetails.Name, spawnDetails.Gear, profile, component);
                 var newMind = _mindSystem.CreateMind(session.UserId, spawnDetails.Name);
-                _mindSystem.ChangeOwningPlayer(newMind, session.UserId);
+                _mindSystem.SetUserId(newMind, session.UserId);
                 _mindSystem.AddRole(newMind, new NukeopsRole(newMind, nukeOpsAntag));
 
                 _mindSystem.TransferTo(newMind, mob);
