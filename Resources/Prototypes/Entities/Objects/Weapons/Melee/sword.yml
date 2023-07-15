@@ -119,3 +119,30 @@
     size: 15
     sprite: Objects/Weapons/Melee/cutlass.rsi
   - type: DisarmMalus
+
+- type: entity
+  name: laser katana
+  parent: BaseItem
+  id: LaserKatana
+  description: A very strong and seemingly frightening katana. 
+  components:
+  - type: Sharp
+  - type: Tag
+    tags:
+    - LaserKatana
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/katana.rsi
+    state: icon
+  - type: MeleeWeapon
+    damage:
+      types:
+        Slash: 27
+        Heat: 15
+        Radiation: 10
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: Item
+    size: 12
+    sprite: Objects/Weapons/Melee/katana.rsi
+  - type: DisarmMalus
+ 
