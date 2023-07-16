@@ -134,15 +134,14 @@
     sprite: Objects/Weapons/Melee/katana.rsi
     state: icon
   - type: MeleeWeapon
+    attackRate: 1.5
     damage:
       types:
-        Slash: 27
-        Heat: 15
-        Radiation: 10
+        Slash: 33
+          Heat: 18
     soundHit:
         path: /Audio/Weapons/bladeslice.ogg
   - type: Item
     size: 12
     sprite: Objects/Weapons/Melee/katana.rsi
   - type: DisarmMalus
- 
